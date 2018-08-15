@@ -1,8 +1,13 @@
 # Dotfiles
 
+### ⚠️ INCOMPLETE & WIP ⚠️
+
 My personal dotfiles for:
+- nvim
 - i3-gaps
 - Polybar
-- Compton
 
-Very WIP, I just wanted to commit this before I went to sleep lmao
+Tools / Libs used:
+- Pywal
+- Compton
+- vim-plug
