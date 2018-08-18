@@ -3,6 +3,10 @@ alias modi3='vim ~/.config/i3/config'
 alias modpolybar='vim ~/.config/polybar/config'
 alias modzsh='vim ~/.zshrc'
 
+export PATH=$PATH':/home/cf12/.gem/ruby/2.5.0/bin'
+export GEM_HOME=$HOME/.gem
+export GEM_PATH=$HOME/.gem
+
 # Checks if nvim exists, and replaces vim w/ nvim
 if type nvim > /dev/null 2>&1; then
   alias vim='nvim'

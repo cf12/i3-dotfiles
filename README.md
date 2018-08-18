@@ -1,7 +1,5 @@
 # Dotfiles
 
-### ⚠️ INCOMPLETE & WIP ⚠️
-
 My personal dotfiles for:
 - nvim
 - i3-gaps
