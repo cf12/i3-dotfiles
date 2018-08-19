@@ -81,7 +81,7 @@ font-2 = Font Awesome 5 Free:style=Regular:pixelsize=10;2
 font-3 = Font Awesome 5 Brands:pixelsize=13;2
 
 modules-left = i3
-modules-center = 
+modules-center =
 modules-right = memory cpu
 
 cursor-click = pointer
@@ -125,7 +125,7 @@ label-focused-padding = 2
 
 ; unfocused = Inactive workspace on any monitor
 label-unfocused = %icon%
-label-unfocused-padding = 2 
+label-unfocused-padding = 2
 
 ; visible = Active workspace on unfocused monitor
 label-visible = %icon%
@@ -157,7 +157,7 @@ label-song-ellipsis = true
 type = internal/xbacklight
 
 format = <label>
-format-prefix = 
+format-prefix = " "
 label = %percentage%%
 
 
