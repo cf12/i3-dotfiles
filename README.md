@@ -1,13 +1,12 @@
 ![Dotfiles Logo](_images/hero.png)
----
 # CF12's Dotfiles
 A repo containing dotfiles for my custom Arch Linux i3-gaps workspace
 
-## Image Showcase
-##### Preset
+### Image Showcase
+#### Preset
 ![Showcase1](_images/showcase1.png)
 
-##### Wallpaper
+#### Wallpaper
 ![Wallpaper](wallpaper.png)
 
 **Modules / Packages Used:**
@@ -27,7 +26,7 @@ A repo containing dotfiles for my custom Arch Linux i3-gaps workspace
 | Thunar	     	 | GUI file manager
 | Font Awesome 5 | Font that provides the icons
 
-##### What's Included:
+#### What's Included:
 - i3-gaps config (with the gaps)
 - Polybar bars & configs
 - URxvt AND Termite configs
@@ -45,7 +44,7 @@ URxvt was being fucky, and not displaying UTF-8 chars correctly for me, which pr
 ## Great shit dog, how do I install this pile of litty shit?
 I'm only sticking instructions for Arch Linux here, so if you're on another distro, ~~switch to arch right now you peasant~~ instructions and package names will vary likely.
 
-##### Packages installable from Pacman / AUR
+#### Packages installable from Pacman / AUR
 - git
 - i3 (Group)
 - i3-gaps
@@ -74,7 +73,7 @@ I'm only sticking instructions for Arch Linux here, so if you're on another dist
 - jsoncpp
 - light
 
-##### GitHub Links (In case you need them)
+#### GitHub Links (In case you need them)
 - betterlockscreen by pavanjadhaw [[GitHub](https://github.com/pavanjadhaw/betterlockscreen)]
 - xcwd by schischi [[GitHub](https://github.com/schischi/xcwd)]
 - oh-my-zsh [[GitHub](https://github.com/robbyrussell/oh-my-zsh)]
@@ -89,19 +88,19 @@ yay -Sy git i3 i3-gaps xorg polybar feh python-pywal rofi zsh oh-my-zsh-git nvim
 ```
 
 ## Setup
-##### Set default shell to zsh
+#### Set default shell to zsh
 ```
 chsh -s /bin/zsh
 ```
 
-##### Set + Cache color palettes
+#### Set + Cache color palettes
 In order to apply the color scheme for zsh and betterlockscreen, you need to set the wallpaper w/ pywal, which will also generate & cache the color palettes for zsh and betterlockscreen. (Note that if you wish to change the wallpaper and regenerate the color scheme, you will have to run this command again.)
 
 ```
 wal -i ~/wallpaper.png
 ```
 
-##### Install Oh-My-Zsh
+#### Install Oh-My-Zsh
 Instead of directly installing oh-my-zsh from the Arch AUR, I installed it through their install scripts from the GitHub repo.
 
 Curl:
@@ -114,14 +113,14 @@ Wget:
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 ```
 
-##### Install + Setup vim plug
+#### Install + Setup vim plug
 Vim Plug install script from their repo:
 ```
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 
 ## Known Issues
-##### No module named pkg_resources (While running wal)
+#### No module named pkg_resources (While running wal)
 [Stack Overflow Link](https://stackoverflow.com/questions/7446187/no-module-named-pkg-resources)
 
 Reinstall setuptools:
