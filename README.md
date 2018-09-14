@@ -1,10 +1,10 @@
-![Dotfiles Logo](_images/hero.png)
+![Dotfiles Logo](images/hero.png)
 # CF12's Dotfiles
 A repo containing dotfiles for my custom Arch Linux i3-gaps workspace
 
 ### Image Showcase
 #### Preset
-![Showcase1](_images/showcase1.png)
+![Showcase1](images/showcase1.png)
 
 #### Wallpaper
 ![Wallpaper](wallpaper.png)
@@ -55,7 +55,6 @@ I'm only sticking instructions for Arch Linux here, so if you're on another dist
 - rofi
 - zsh
 - oh-my-zsh-git
-- nvim
 - rxvt-unicode / termite
 - neovim
 - thunar
@@ -66,9 +65,9 @@ I'm only sticking instructions for Arch Linux here, so if you're on another dist
 - pulseaudio
 - arc-gtk-theme
 - arc-icon-theme
-- noto-fonts
 - ttf-font-awesome
 - powerline-fonts-git
+- noto-fonts
 - ttf-ms-fonts
 - jsoncpp
 - light
@@ -84,7 +83,7 @@ I'm only sticking instructions for Arch Linux here, so if you're on another dist
 
 Example install cmd (Using the yay package manager):
 ```
-yay -Sy git i3 i3-gaps xorg polybar feh python-pywal rofi zsh oh-my-zsh-git nvim rxvt-unicode termite neovim thunar compton xcwd-git betterlockscreen playerctl pulseaudio arc-gtk-theme arc-icon-theme noto-fonts ttf-font-awesome powerline-fonts-git ttf-ms-fonts jsoncpp light
+yay -Sy git i3 i3-gaps xorg polybar feh python-pywal rofi zsh oh-my-zsh-git rxvt-unicode termite neovim thunar compton xcwd-git betterlockscreen playerctl pulseaudio arc-gtk-theme arc-icon-theme ttf-font-awesome powerline-fonts-git noto-fonts ttf-ms-fonts jsoncpp light python-setuptools
 ```
 
 ## Setup
@@ -98,6 +97,12 @@ In order to apply the color scheme for zsh and betterlockscreen, you need to set
 
 ```
 wal -i ~/wallpaper.png
+```
+
+#### Update betterlockscreen
+Betterlockscreen needs to be ran every time you update the wallpaper / monitor configuration, in order to generate accurate images for the lockscreen.
+```
+betterlockscreen ~/wallpaper.png
 ```
 
 #### Install Oh-My-Zsh
@@ -114,10 +119,12 @@ sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/to
 ```
 
 #### Install + Setup vim plug
-Vim Plug install script from their repo:
+Install vim plug via the following command:
 ```
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
+
+Then, launch nvim using `nvim`, and run the command `:PlugInstall`
 
 ## Known Issues
 #### No module named pkg_resources (While running wal)
@@ -125,5 +132,5 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.g
 
 Reinstall setuptools:
 ```
-yay -Sy setuptools
+yay -Sy python-setuptools
 ```

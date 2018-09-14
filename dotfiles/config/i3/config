@@ -106,6 +106,10 @@ bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
+# Workspace switching between monitors
+bindsym $mod+Shift+greater move workspace to output right
+bindsym $mod+Shift+less move workspace to output left
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
@@ -144,13 +148,13 @@ bindsym $mod+r mode "resize"
 exec_always --no-startup-id $HOME/.config/scripts/polybar.sh
 
 # Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 1 +5% #increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 1 -5% #decrease sound volume
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 1 toggle # mute sound
 
 # Media player controls
 bindsym XF86AudioPlay exec playerctl play
-bindsym XF86AudioPause exec playerctl pause
+bindsym XF86AudioStop exec playerctl pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
@@ -160,15 +164,15 @@ hide_edge_borders both
 # Load Compton
 exec compton -f
 
+# Setup monitor scheme
+exec_always $HOME/.screenlayout/main.sh
+
 # Wallpaper
-exec_always feh --bg-scale /home/cf12/wallpaper.png
+exec_always feh --bg-scale $HOME/wallpaper.png
 
 # custom keybinding to lockscreen, use --lock dim or --lock blur below for different backgrounds
 bindsym $mod+shift+x exec betterlockscreen --lock blur
 exec --no-startup-id betterlockscreen -w
-
-# Start VBox Guest Additions Client
-exec_always VBoxClient-all
 
 # i3 Gaps Customization
 for_window [class="^.*"] border pixel 2
@@ -177,8 +181,8 @@ gaps inner 8
 gaps outer 10
 
 # Window loads
-assign [class="FireFox"] $ws1
-exec firefox
+assign [class="Firefox Developer Edition"] $ws1
+exec firefox-developer-edition
 
 assign [class="Thunar"] $ws3
 exec thunar
