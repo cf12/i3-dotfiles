@@ -159,3 +159,22 @@ nnoremap <C-L> :nohl<CR><C-L>
 "------------------------------------------------------------
 
 set guicursor=
+
+
+" Initialize Plugins
+call plug#begin('~/.vim/plugged')
+
+if has('nvim')
+    Plug 'tpope/vim-fugitive'
+    Plug 'tpope/vim-surround'
+    Plug 'scrooloose/nerdtree'
+    Plug 'scrooloose/syntastic'
+    Plug 'airblade/vim-gitgutter'
+    Plug 'vim-airline/vim-airline'
+    Plug 'scrooloose/nerdcommenter'
+    Plug 'vim-airline/vim-airline-themes'
+    Plug 'ctrlpvim/ctrlp.vim'
+    Plug 'tpope/vim-sleuth'
+endif
+
+call plug#end()
