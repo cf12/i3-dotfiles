@@ -1,5 +1,5 @@
 ![Dotfiles Logo](images/hero.png)
-# CF12's Dotfiles
+# i3 dotfiles
 A repo containing dotfiles for my custom Arch Linux i3-gaps workspace
 
 ### Image Showcase
@@ -38,11 +38,8 @@ A repo containing dotfiles for my custom Arch Linux i3-gaps workspace
 ## Wallpaper
 Wallpaper is from the movie, *"Kimi No Na Wa (Your Name),"* and was scaled up to **3920 x 2160** using [Waifu2x](http://waifu2x.udp.jp/)
 
-## Wait CF12, why do you have configs for both URxvt AND Termite?
-URxvt was being fucky, and not displaying UTF-8 chars correctly for me, which prompted me to switch over to Termite for the time being. If you're having better luck with it, that's great, just know that I'll probably still be in termite-land.
-
-## Great shit dog, how do I install this pile of litty shit?
-I'm only sticking instructions for Arch Linux here, so if you're on another distro, ~~switch to arch right now you peasant~~ instructions and package names will vary likely.
+## Why both URxvt AND Termite?
+URxvt was being weird, and not displaying UTF-8 chars correctly for me, which prompted me to switch over to Termite for the time being. If you're having better luck with it, that's great, just know that I'll probably still be in termite-land.
 
 #### Packages installable from Pacman / AUR
 - git
